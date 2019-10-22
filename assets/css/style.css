@@ -1,0 +1,35 @@
+body{
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.container {
+
+        margin: 75px auto 50px auto;
+        width: 50%;
+        
+        
+    }
+
+#heading{
+    font-family: 'Courgette', cursive;
+    font-size: 80px;
+    color: rgb(189, 10, 174);
+}
+#start-btn{
+    color: rgb(189, 10, 174);
+    font-family: 'Courgette', cursive;
+    font-size: 50px;
+    background-color: rgb(246, 208, 253);
+
+}
+#start-btn:hover {
+    background-color: #f405fcd8; 
+    color: white;
+  }
+#start-btn:active {
+    background-color: rgb(189, 10, 174);
+    color: white;
+    box-shadow: 0 5px rgb(77, 76, 76);
+    transform: translateY(4px);
+  }
