@@ -6,3 +6,18 @@ $("#start-btn").click(function(){
 
 
   });
+
+  $(".answ-btn").click(function(){
+    $("#q_a").hide();
+    $("#y_n").css("display", "block")
+
+
+  });
+
+  $("#cont-btn").click(function(){
+    $("#y_n").hide();
+    $("#q_a").css("display", "block")
+
+
+  });
+

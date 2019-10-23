@@ -30,6 +30,22 @@ body{
     box-shadow: 0 5px rgb(77, 76, 76);
     transform: translateY(4px);
   }
+  #cont-btn{
+    color: rgb(189, 10, 174);
+    font-family: 'Courgette', cursive;
+    font-size: 50px;
+    background-color: rgb(246, 208, 253);
+  }
+#cont-btn:hover {
+    background-color: #f405fcd8; 
+    color: white;
+  }
+#cont-btn:active {
+    background-color: rgb(189, 10, 174);
+    color: white;
+    box-shadow: 0 5px rgb(77, 76, 76);
+    transform: translateY(4px);
+  }
   #img-front {
       width: 600px;
       height: 425px;
@@ -38,10 +54,20 @@ body{
   #q_a{
     margin: 75px auto 50px auto;
     width: 80%;
-    background-color: rgb(247, 177, 247, 0.4);
     display: none;
-
   }
+
+  #y_n{
+    margin: 75px auto 50px auto;
+    width: 80%;
+    display: none;
+  }
+  #final{
+    margin: 75px auto 50px auto;
+    width: 80%;
+    display: none;
+  }
+
   #jumbo{
     margin: 75px auto 50px auto;
     width: 85%;
