@@ -99,3 +99,55 @@ var questions = [
 
 ]
 
+$("#start-btn").on("click", start);
+$("#cont-btn").on("click", start);
+
+var intervalId;
+var clockRunning = false;
+var time = 20;
+
+function reset() {
+    time = 20;
+    $("#timer").text("00:00");
+  }
+
+  function start() {
+    time = 20;
+    $("#timer").text("00:20");
+    console.log(time)
+    if (!clockRunning) {
+      intervalId = setInterval(count, 1000);
+      clockRunning = true;
+    }
+  }
+
+  function count() {
+    time--;
+    var converted = timeConverter(time);
+    console.log(converted);
+    $("#timer").text(converted);
+    if (time === 0) {
+        $("#q_a").hide();
+        $("#noTime").css("display", "block")
+    }
+  }
+  function timeConverter(t) {
+  
+    var minutes = Math.floor(t / 60);
+    var seconds = t - (minutes * 60);
+  
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+  
+    if (minutes === 0) {
+      minutes = "00";
+    }
+    else if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+  
+    return minutes + ":" + seconds;
+  }
+  
+

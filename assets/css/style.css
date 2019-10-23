@@ -67,6 +67,12 @@ body{
     width: 80%;
     display: none;
   }
+  #noTime{
+    margin: 75px auto 50px auto;
+    width: 80%;
+    display: none;
+  }
+
 
   #jumbo{
     margin: 75px auto 50px auto;
