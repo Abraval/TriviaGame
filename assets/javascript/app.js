@@ -108,16 +108,16 @@ $(".answ-btn").on("click", stop);
 
 var intervalId;
 var clockRunning = false;
-var time = 20;
+var time = 10;
 
 function reset() {
-    time = 20;
+    time = 10;
     $("#timer").text("00:00");
 }
 
 function start() {
-    time = 20;
-    $("#timer").text("00:20");
+    time = 10;
+    $("#timer").text("00:10");
     console.log(time)
     if (!clockRunning) {
         intervalId = setInterval(count, 1000);
@@ -174,9 +174,11 @@ console.log(questions.length)
     }else if (questionIndex === questions.length) {
         $("#y_n").hide();
         $("#q_a").hide();
+        // $("noTime").hide();
         $("#final").css("display", "block")
         document.querySelector("#corTally").innerHTML = correct;
         document.querySelector("#wrongTally").innerHTML = wrong;
+        stop();
         return;
         // $("#corTally").text(correct);
         // $("#wrongTally").text(wrong);
@@ -189,16 +191,16 @@ $(".answ-btn").on("click", function () {
     console.log(userChoice);
     if (userChoice === questions[questionIndex].correct) {
         correct++;
-        $("#yesOrNo").text("You you correct!");
+        $("#yesOrNo").text("You are correct!");
         $("#itWas").text(questions[questionIndex].correct);
-        displayImage();
+        // displayImage();
 
     }
     else {
         wrong++;
         $("#yesOrNo").text("Oh no! It's wrong!");
         $("#itWas").text(questions[questionIndex].correct);
-        displayImage();
+        // displayImage();
 
 
     }})
