@@ -12,66 +12,70 @@
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="headerImg">
-        </div>
-
-        <div class="row py-3">
-            <div class="col-10 heading border-0 rounded-pill shadow py-3 my-auto mx-auto text-center">
+    <div class="container" id="intro">
+        <!--Intro Page-->
+        <div class="row py-3" id="main">
+            <div class="col-10 border-0 rounded-pill shadow py-3 my-auto mx-auto text-center">
                 <h1 id="heading">Princess Trivia</h1>
             </div>
-            <div class="col-10 image py-3 my-auto mx-auto border-0 rounded-pill">
-                <img src="assets/images/front.jpg" class="img-fluid img-thumbnail shadow my-auto mx-auto" id="front" />
+            <div class="image-front col-10 py-3 my-auto mx-auto border-0 rounded-pill">
+                <img src="assets/images/front.jpg" class="img-thumbnail my-auto mx-auto  shadow" id="img-front" />
             </div>
 
         </div>
-        <div class="row py-3">
+        <div class="row py-3" id="main-btn">
             <div class="col-10 my-5 py-auto my-auto mx-auto text-center">
-                <p><button type="button" class="btn btn-lg btn-block border-0 rounded-pill shadow" id="start-btn">START!</button></p>
+                <p><button type="button" class="btn btn-lg btn-block border-0 rounded-pill shadow"
+                        id="start-btn">START!</button></p>
             </div>
         </div>
+    </div>
+    <!--End of Intro Page-->
+    <!--Start of Questions/Anwers Page-->
 
 
-        <!-- <div class="row py-3">
-            <div class="col-6 border-0 rounded-pill shadow my-1 bg-dark text-white py-1 my-auto mx-auto text-center">
-              
-                <div class="Word font-weight-bold text-uppercase">
-                    <p>Current Word: <span id="word"></span></p>
-                    <p id="underscores"></p>
-                    <br>
+    <div class="container border-0 rounded shadow hidden" id="q_a">
+        <div class="row py-3">
+
+            <div class="jumbotron border-0 rounded shadow" id="jumbo">
+                <h4 class="text-center">Time:<span id="timer"></span></h4>
+                <hr>
+                <h4>Question:</h4>
+                <p id="question"></p>
+                <div class="row py-3" id="answ-buttons">
+                    <div class="col-6 my-5 py-auto my-auto mx-auto text-center">
+                        <button type="button" class="btn btn-light btn-block my-2">Answer 1</button>
+
+                    </div>
+                    <div class="col-6 my-5 py-auto my-auto mx-auto text-center">
+                        <button type="button" class="btn btn-light btn-block my-2">Answer 2</button>
+
+                    </div>
+                    <div class="col-6 my-5 py-auto my-auto mx-auto text-center">
+                        <button type="button" class="btn btn-light btn-block my-2">Answer 3</button>
+
+                    </div>
+                    <div class="col-6 my-5 py-auto my-auto mx-auto text-center">
+                        <button type="button" class="btn btn-light btn-block my-2">Answer 4</button>
+
+                    </div>
                 </div>
+
             </div>
         </div>
-
-        
-        <div class="row py-3">
-            <div
-                class="col-4 border-0 rounded-pill shadow my-1 bg-secondary text-white py-1 my-auto mx-auto text-center">
-                <p>Wins: <span id="winsText"></span></p>
-                <br>
-            </div>
-        </div>
-
-        <div class="row py-3">
-            <div
-                class="col-4 border-0 rounded-pill shadow my-1 bg-secondary text-white py-1 my-auto mx-auto text-center">
-                <p>Remaining Guesses: <span id="guessesText"></span></p>
-                <br>
-            </div>
-        </div>
-
-        <div class="row py-3">
-            <div
-                class="col-6 border-0 rounded-pill shadow my-1 bg-secondary text-white py-1 my-auto mx-auto text-center">
-                <div class="guessedLetters">
-                    <p>Letters guessed: <span id="guessedLettersText"></span></p>
-                    <br>
-                </div>
-            </div>
-        </div> -->
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

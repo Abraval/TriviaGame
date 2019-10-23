@@ -3,14 +3,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     }
-.container {
+#intro {
 
         margin: 75px auto 50px auto;
         width: 50%;
-        
-        
-    }
-
+}
 #heading{
     font-family: 'Courgette', cursive;
     font-size: 80px;
@@ -33,3 +30,25 @@ body{
     box-shadow: 0 5px rgb(77, 76, 76);
     transform: translateY(4px);
   }
+  #img-front {
+      width: 600px;
+      height: 425px;
+      
+  }
+  #q_a{
+    margin: 75px auto 50px auto;
+    width: 80%;
+    background-color: rgb(247, 177, 247, 0.4);
+    display: none;
+
+  }
+  #jumbo{
+    margin: 75px auto 50px auto;
+    width: 85%;
+    background-color: rgb(247, 177, 247, 0.4);
+    color: rgb(189, 10, 174);
+    font-family: 'Courgette', cursive;
+
+  }
+
+  
