@@ -46,6 +46,22 @@ body{
   box-shadow: 0 5px rgb(77, 76, 76);
   transform: translateY(4px);
 }
+.setGame {
+  color: rgb(189, 10, 174);
+  font-family: 'Courgette', cursive;
+  font-size: 50px;
+  background-color: rgb(246, 208, 253);
+}
+.setGame:hover {
+  background-color: #f405fcd8; 
+  color: white;
+}
+.setGame:active {
+  background-color: rgb(189, 10, 174);
+  color: white;
+  box-shadow: 0 5px rgb(77, 76, 76);
+  transform: translateY(4px);
+}
 #img-front {
     width: 600px;
     height: 425px;

@@ -121,6 +121,7 @@ function setGame() {
     start();
     renderQuestion();
     $("#noTime").hide();
+    $("#final").hide();
     $("#q_a").css("display", "block")
 }
 
