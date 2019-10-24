@@ -1,6 +1,9 @@
 var correct = 0;
 var wrong = 0;
 var questionIndex = 0;
+var intervalId;
+var clockRunning = false;
+var time = 10;
 
 $("#start-btn").click(function () {
     $("#intro").hide();
@@ -9,6 +12,7 @@ $("#start-btn").click(function () {
 
 $(".answ-btn").click(function () {
     $("#q_a").hide();
+    $(".funGif").attr("src", `assets/images/${questionIndex + 1}.gif`)
     $("#y_n").css("display", "block")
 });
 
@@ -17,6 +21,7 @@ $("#cont-btn").click(function () {
     $("#q_a").css("display", "block")
     questionIndex++;
 });
+
 
 var questions = [
     {
@@ -105,15 +110,24 @@ var questions = [
 $("#start-btn").on("click", start);
 $("#cont-btn").on("click", start);
 $(".answ-btn").on("click", stop);
+$(".setGame").on("click", setGame);
 
-var intervalId;
-var clockRunning = false;
-var time = 10;
-
-function reset() {
-    time = 10;
-    $("#timer").text("00:00");
+function setGame() {
+    //shortcut
+    // window.location.reload()
+    //long version
+    console.log("click");
+    questionIndex = 0;
+    start();
+    renderQuestion();
+    $("#noTime").hide();
+    $("#q_a").css("display", "block")
 }
+
+// function reset() {
+//     time = 10;
+//     $("#timer").text("00:10");
+// }
 
 function start() {
     time = 10;
@@ -122,7 +136,10 @@ function start() {
     if (!clockRunning) {
         intervalId = setInterval(count, 1000);
         clockRunning = true;
+    }else{
+        clearInterval(intervalId);
     }
+    
 }
 
 function count() {
@@ -131,11 +148,13 @@ function count() {
     console.log(converted);
     $("#timer").text(converted);
     if (time === 0) {
+        stop();
         $("#q_a").hide();
         $("#noTime").css("display", "block")
     }
 }
 function stop() {
+    
     clearInterval(intervalId);
     clockRunning = false;
     var converted = timeConverter(time);
@@ -161,17 +180,17 @@ function timeConverter(t) {
     return minutes + ":" + seconds;
 }
 function renderQuestion() {
-console.log("Render function")
+    console.log("Render function")
 
-console.log(questionIndex);
-console.log(questions.length)
+    console.log(questionIndex);
+    console.log(questions.length)
     if (questionIndex <= (questions.length - 1)) {
         document.querySelector("#question").innerHTML = questions[questionIndex].q;
         document.querySelector("#answer1").innerHTML = questions[questionIndex].a1;
         document.querySelector("#answer2").innerHTML = questions[questionIndex].a2;
         document.querySelector("#answer3").innerHTML = questions[questionIndex].a3;
         document.querySelector("#answer4").innerHTML = questions[questionIndex].a4;
-    }else if (questionIndex === questions.length) {
+    } else if (questionIndex === questions.length) {
         $("#y_n").hide();
         $("#q_a").hide();
         // $("noTime").hide();
@@ -184,7 +203,23 @@ console.log(questions.length)
         // $("#wrongTally").text(wrong);
     }
 }
+// $(".timeout").click(function () {
+//     $("#noTime").hide();
+//     $("#final").hide();
+//     $("#q_a").css("display", "block")
+// stop();
+// start();
+
+// })
 $(".qbtn").on("click", renderQuestion);
+$(".timeout").click(function () {
+    $("#noTime").hide();
+    $("#final").hide();
+    $("#q_a").css("display", "block")
+    stop();
+    start();
+
+})
 $(".answ-btn").on("click", function () {
 
     var userChoice = $(this).text();
@@ -203,4 +238,5 @@ $(".answ-btn").on("click", function () {
         // displayImage();
 
 
-    }})
+    }
+})
