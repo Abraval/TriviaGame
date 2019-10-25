@@ -123,6 +123,8 @@ function setGame() {
     $("#noTime").hide();
     $("#final").hide();
     $("#q_a").css("display", "block")
+    correct = 0;
+    wrong = 0;
 }
 
 // function reset() {
